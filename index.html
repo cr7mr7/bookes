@@ -3,24 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>موقع الكتب - Moamel Nabeel</title>
+<title>Moamel Nabeel - الموقع الرئيسي</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <style>
-* { box-sizing: border-box; margin:0; padding:0; font-family: 'Cairo', sans-serif; }
-body { background-color: #f0f8ff; color: #333; line-height: 1.6; }
-header { background-color: #4f46e5; color: #fff; padding: 30px 20px; text-align: center; }
-header h1 { font-weight: 600; font-size: 28px; display: inline-block; margin-right:10px; }
-header a { color:#E1306C; font-size:18px; margin-left:10px; display:inline-flex; align-items:center; text-decoration:none; }
-header a img { width:28px; height:28px; margin-right:5px; }
-header p { font-weight: 400; margin-top: 10px; font-size: 16px; color: #d1d5db; }
+body {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+}
+
+header {
+  background-color: #4f46e5;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  font-weight: 600;
+  font-size: 28px;
+  display: inline-block;
+  margin-right:10px;
+}
+
+header a {
+  color:#E1306C;
+  font-size:18px;
+  margin-left:10px;
+  display:inline-flex;
+  align-items:center;
+  text-decoration:none;
+}
+
+header a img {
+  width:28px;
+  height:28px;
+  margin-right:5px;
+}
+
+header p {
+  font-weight: 400;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #d1d5db;
+}
+
+/* الاسم الجانبي */
+#userDisplay {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #ff758c;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* تبويب المرحلة الأولى والثانية */
 .tabs { text-align:center; margin:20px 0; }
 .tabs button { background:#4f46e5; color:#fff; border:none; padding:10px 20px; margin:0 5px; border-radius:5px; cursor:pointer; font-size:16px; }
 .tabs button.active { background:#2563eb; }
+
 section { max-width: 1200px; margin: 20px auto; padding: 0 20px; display:none; }
 section.active { display:block; }
+
 h2 { margin-bottom: 20px; font-size: 24px; color: #111827; border-bottom: 2px solid #4f46e5; display: inline-block; padding-bottom: 5px; }
+
 .books-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px; }
+
 .book-card { background-color: #fff; border-radius: 10px; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; text-align: center; }
 .book-card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
 .book-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 5px; }
@@ -31,6 +87,7 @@ h2 { margin-bottom: 20px; font-size: 24px; color: #111827; border-bottom: 2px so
 .open-btn:hover { background-color: #2563eb; }
 .download-btn { background-color: #10b981; }
 .download-btn:hover { background-color: #059669; }
+
 footer { text-align: center; padding: 20px; background-color: #4f46e5; color: #fff; margin-top: 40px; }
 </style>
 </head>
@@ -43,6 +100,7 @@ footer { text-align: center; padding: 20px; background-color: #4f46e5; color: #f
     </a>
   </h1>
   <p>هذا الموقع خاص بطلاب قسم الإنكليزي - جامعة الكوفة</p>
+  <div id="userDisplay"></div>
 </header>
 
 <div class="tabs">
@@ -53,8 +111,7 @@ footer { text-align: center; padding: 20px; background-color: #4f46e5; color: #f
 <section id="first" class="active">
   <h2>كتب المرحلة الأولى</h2>
   <div class="books-grid">
-    <!-- هنا تبقى كتب المرحلة الأولى مالك مثل ما هي -->
-    <!-- مثال -->
+    <!-- مثال كتاب -->
     <div class="book-card">
       <img src="images (3).png" alt="Book 1">
       <h3>English Grammar in Use</h3>
@@ -63,22 +120,49 @@ footer { text-align: center; padding: 20px; background-color: #4f46e5; color: #f
         <a href="https://drive.google.com/uc?export=download&id=1rVQqTsZo-8usSRJMZoj-PvApwWhlXMus" download class="download-btn">تحميل الكتاب</a>
       </div>
     </div>
-    <div class="book-card"> <img src="1.png" alt="Book 2"> <h3>Better English Pronunciation</h3> <div class="buttons"> <a href="https://drive.google.com/file/d/1u0awIt0OxbHDDrDZlOFhYSCIYlRiahgq/view?usp=sharing" target="_blank" class="open-btn">فتح الكتاب</a> <a href="https://drive.google.com/uc?export=download&id=1u0awIt0OxbHDDrDZlOFhYSCIYlRiahgq" download class="download-btn">تحميل الكتاب</a> </div> </div>
-    <!-- كتاب 3 --> <div class="book-card"> <img src="acadimic.png" alt="Book 3"> <h3>Academic Writing</h3> <div class="buttons"> <a href="https://drive.google.com/file/d/11m8TwKihyDYKDTeU30VeQpFk_FhqGBWN/view?usp=sharing" target="_blank" class="open-btn">فتح الكتاب</a> <a href="https://drive.google.com/uc?export=download&id=11m8TwKihyDYKDTeU30VeQpFk_FhqGBWN" download class="download-btn">تحميل الكتاب</a> </div> </div> 
-    <!-- كتاب 4 --> <div class="book-card"> <img src="reading.jpg" alt="Book 4"> <h3>Reading</h3> <div class="buttons"> <a href="https://drive.google.com/file/d/1caAvnv6_daW887yQnqmH5srRV14SWmw2/view?usp=sharing" target="_blank" class="open-btn">فتح الكتاب</a> <a href="https://drive.google.com/uc?export=download&id=1caAvnv6_daW887yQnqmH5srRV14SWmw2" download class="download-btn">تحميل الكتاب</a> </div> </div> 
-    <!-- كتاب 5 --> <div class="book-card"> <img src="sa.webp" alt="Book 5"> <h3>Real-listening-and-speaking-2</h3> <div class="buttons"> <a href="https://drive.google.com/file/d/10o8JmPfuOMRQEx43fHKctot808OMA-5e/view?usp=sharing" target="_blank" class="open-btn">فتح الكتاب</a> <a href="https://drive.google.com/uc?export=download&id=10o8JmPfuOMRQEx43fHKctot808OMA-5e" download class="download-btn">تحميل الكتاب</a> </div> </div> 
+    <!-- كرر باقي الكتب هنا حسب كود
+    <-- Book 2 -->
+    <div class="book-card">
+      <img src="1.png" alt="Book 2">
+      <h3>Better English Pronunciation</h3>
+      <div class="buttons">
+        <a href="https://drive.google.com/file/d/1u0awIt0OxbHDDrDZlOFhYSCIYlRiahgq/view?usp=sharing" target="_blank" class="open-btn">فتح الكتاب</a>
+        <a href="https://drive.google.com/uc?export=download&id=1u0awIt0OxbHDDrDZlOFhYSCIYlRiahgq" download class="download-btn">تحميل الكتاب</a>
+      </div>
+    </div>
+
+    <!-- كتاب 3 -->
+    <div class="book-card">
+      <img src="acadimic.png" alt="Book 3">
+      <h3>Academic Writing</h3>
+      <div class="buttons">
+        <a href="https://drive.google.com/file/d/11m8TwKihyDYKDTeU30VeQpFk_FhqGBWN/view?usp=sharing" target="_blank" class="open-btn">فتح الكتاب</a>
+        <a href="https://drive.google.com/uc?export=download&id=11m8TwKihyDYKDTeU30VeQpFk_FhqGBWN" download class="download-btn">تحميل الكتاب</a>
+      </div>
+    </div>
+
+    <!-- كتاب 4 -->
+    <div class="book-card">
+      <img src="reading.jpg" alt="Book 4">
+      <h3>Reading</h3>
+      <div class="buttons">
+        <a href="https://drive.google.com/file/d/1caAvnv6_daW887yQnqmH5srRV14SWmw2/view?usp=sharing" target="_blank" class="open-btn">فتح الكتاب</a>
+        <a href="https://drive.google.com/uc?export=download&id=1caAvnv6_daW887yQnqmH5srRV14SWmw2" download class="download-btn">تحميل الكتاب</a>
+      </div>
+    </div>
+<!-- كتاب 5 --> <div class="book-card"> <img src="sa.webp" alt="Book 5"> <h3>Real-listening-and-speaking-2</h3> <div class="buttons"> <a href="https://drive.google.com/file/d/10o8JmPfuOMRQEx43fHKctot808OMA-5e/view?usp=sharing" target="_blank" class="open-btn">فتح الكتاب</a> <a href="https://drive.google.com/uc?export=download&id=10o8JmPfuOMRQEx43fHKctot808OMA-5e" download class="download-btn">تحميل الكتاب</a> </div> </div> 
     <!-- كتاب 6 --> <div class="book-card"> <img src="potery.webp" alt="Book 6"> <h3>Potery</h3> <div class="buttons"> <a href="https://drive.google.com/file/d/17FNbA_IH0tCIDTQLKwJD28FpMdZuaRqx/view?usp=sharing" target="_blank" class="open-btn">فتح الكتاب</a> <a href="https://drive.google.com/uc?export=download&id=17FNbA_IH0tCIDTQLKwJD28FpMdZuaRqx" download class="download-btn">تحميل الكتاب</a> </div> </div> 
     <!-- كتاب 7 --> <div class="book-card"> <img src="JJ.jpg" alt="Book 7"> <h3>علم نفس</h3> <div class="buttons"> <a href="https://drive.google.com/file/d/1yTK7f9F6MHo4BfWKIQeqB4E_42fcPRMT/view?usp=sharing" target="_blank" class="open-btn">فتح الكتاب</a> <a href="https://drive.google.com/uc?export=download&id=1yTK7f9F6MHo4BfWKIQeqB4E_42fcPRMT" download class="download-btn">تحميل الكتاب</a> </div> </div> <!-- كتاب 8 --> <div class="book-card"> <img src="ARAB.webp" alt="Book 8"> <h3>عربي</h3> <div class="buttons"> <a href="https://drive.google.com/file/d/1i4UxEDrO6-nTdc6gVJxTZMtCKwBJgGx0/view?usp=sharing" target="_blank" class="open-btn">فتح الكتاب</a> <a href="https://drive.google.com/uc?export=download&id=1i4UxEDrO6-nTdc6gVJxTZMtCKwBJgGx0" download class="download-btn">تحميل الكتاب</a> </div> </div> <!-- كتاب 9 --> <div class="book-card"> <img src="computing_Fundamentals_Bakro-book.png" alt="Book 9"> <h3>حاسوب</h3> <div class="buttons"> <a href="https://drive.google.com/file/d/1D0DYQh9OS-HxNdfrWQq0_pWOwG4qf8Zp/view?usp=sharing" target="_blank" class="open-btn">فتح الكتاب</a> <a href="https://drive.google.com/uc?export=download&id=1D0DYQh9OS-HxNdfrWQq0_pWOwG4qf8Zp" download class="download-btn">تحميل الكتاب</a> </div> </div> <!-- كتاب 10 --> <div class="book-card"> <img src="photo_2025-09-07_01-04-45.jpg" alt="Book 10"> <h3>أسس التربية</h3> <div class="buttons"> <a href="https://drive.google.com/file/d/1dq1F4TF8FmfrNttO6X54ZLNizHGWH7zq/view?usp=sharing" target="_blank" class="open-btn">فتح الكتاب</a> <a href="https://drive.google.com/uc?export=download&id=1dq1F4TF8FmfrNttO6X54ZLNizHGWH7zq" download class="download-btn">تحميل الكتاب</a> </div> </div> <!-- كتاب 11 --> <div class="book-card"> <img src="photo_2025-09-07_01-04-52.jpg" alt="Book 11"> <h3>حقوق</h3> <div class="buttons"> <a href="https://drive.google.com/file/d/1r-GvQU3e65llTIvaeC_hcIkdqoS3aB9J/view?usp=sharing" target="_blank" class="open-btn">فتح الكتاب</a> <a href="https://drive.google.com/uc?export=download&id=1r-GvQU3e65llTIvaeC_hcIkdqoS3aB9J" download class="download-btn">تحميل الكتاب</a> </div> </div>
 
-    <!-- كرر باقي كتب المرحلة الأولى كما بالكود مالك -->
+    <!-- كرر باقي الكتب كما هي لديك للمرحلة الأولى -->
+
   </div>
 </section>
 
 <section id="second">
   <h2>كتب المرحلة الثانية</h2>
   <div class="books-grid">
-    <!-- هنا تبقى كتب المرحلة الثانية مالك مثل ما هي -->
-    <!-- مثال -->
+    <!-- كتاب 12 -->
     <div class="book-card">
       <img src="graa.jpg" alt="Book 12">
       <h3>An Introductory English Grammar 4th</h3>
@@ -87,16 +171,16 @@ footer { text-align: center; padding: 20px; background-color: #4f46e5; color: #f
         <a href="https://drive.google.com/uc?export=download&id=1v8M5S-viqA1ixGkKpUCUJOhwKetpMTgu" download class="download-btn">تحميل الكتاب</a>
       </div>
     </div>
-    <div class="book-card">
-<img src="ph.jpg" alt="Book 13">
-<h3>Phonetics & Phonology 4th</h3>
-<div class="buttons">
-<a href="https://drive.google.com/file/d/15IJgKKQuaLGAENAvlXdSqDL_ni513l8s/view?usp=sharing" target="_blank" class="open-btn">فتح الكتاب</a>
-<a href="https://drive.google.com/uc?export=download&id=15IJgKKQuaLGAENAvlXdSqDL_ni513l8s" download class="download-btn">تحميل الكتاب</a>
-</div>
-</div>
 
-<!-- كتاب 14 -->
+    <!-- كتاب 13 -->
+    <div class="book-card">
+      <img src="ph.jpg" alt="Book 13">
+      <h3>Phonetics & Phonology 4th</h3>
+      <div class="buttons">
+        <a href="https://drive.google.com/file/d/15IJgKKQuaLGAENAvlXdSqDL_ni513l8s/view?usp=sharing" target="_blank" class="open-btn">فتح الكتاب</a>
+        <a href="https://drive.google.com/uc?export=download&id=15IJgKKQuaLGAENAvlXdSqDL_ni513l8s" download class="download-btn">تحميل الكتاب</a>
+      </div>
+    </div>
 <div class="book-card">
 <img src="writing.jpg" alt="Book 14">
 <h3>Introduction to Academic Writing</h3>
@@ -165,7 +249,8 @@ footer { text-align: center; padding: 20px; background-color: #4f46e5; color: #f
 <a href="https://drive.google.com/uc?export=download&id=1rVQqTsZo-8usSRJMZoj-PvApwWhlXMus" download class="download-btn">تحميل الكتاب</a>
 </div>
 </div>
-    <!-- كرر باقي كتب المرحلة الثانية كما بالكود مالك -->
+    <!-- كرر باقي الكتب للمرحلة الثانية حسب كودك -->
+
   </div>
 </section>
 
@@ -174,15 +259,22 @@ footer { text-align: center; padding: 20px; background-color: #4f46e5; color: #f
 </footer>
 
 <script>
+// تبويبات المرحلة الأولى والثانية
 function showTab(tabId) {
   document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
   document.getElementById(tabId).classList.add('active');
   document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
   event.target.classList.add('active');
 }
+
+// عرض اسم المستخدم أو إعادة التوجيه إذا لم يسجل
+const username = localStorage.getItem("username");
+if (!username) {
+  window.location.href = "login.html";
+} else {
+  document.getElementById("userDisplay").textContent = username;
+}
 </script>
 
 </body>
 </html>
-
-
